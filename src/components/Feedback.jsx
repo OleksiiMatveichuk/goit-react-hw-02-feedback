@@ -25,6 +25,12 @@ export class Feedback extends Component {
     }));
   };
 
+  countTotalFeedback = () => {
+    return this.state.good + this.state.neutral + this.state.bad;
+  };
+
+  countPositiveFeedbackPercentage = () => {};
+
   render() {
     return (
       <div>
@@ -56,7 +62,7 @@ export class Feedback extends Component {
           </li>
           <li>
             <p>Total</p>
-            <span></span>
+            <span>{this.countTotalFeedback()}</span>
           </li>
           <li>
             <p>Positive feedback:</p>
