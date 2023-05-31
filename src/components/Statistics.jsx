@@ -1,4 +1,5 @@
 import ListGroup from 'react-bootstrap/ListGroup';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({
   good,
@@ -8,28 +9,6 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return (
-    // <ul>
-    //   <li>
-    //     <p>Good:</p>
-    //     <span>{good}</span>
-    //   </li>
-    //   <li>
-    //     <p>Neutral:</p>
-    //     <span>{neutral}</span>
-    //   </li>
-    //   <li>
-    //     <p>Bad:</p>
-    //     <span>{bad}</span>
-    //   </li>
-    //   <li>
-    //     <p>Total</p>
-    //     <span>{total}</span>
-    //   </li>
-    //   <li>
-    //     <p>Positive feedback:</p>
-    //     <span>{positivePercentage() || 0} %</span>
-    //   </li>
-    // </ul>
     <ListGroup>
       <ListGroup.Item>
         <p>Good:</p>
@@ -53,4 +32,11 @@ export const Statistics = ({
       </ListGroup.Item>
     </ListGroup>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
 };
