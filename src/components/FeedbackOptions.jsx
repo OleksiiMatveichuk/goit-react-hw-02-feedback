@@ -1,10 +1,18 @@
+import Button from 'react-bootstrap/Button';
+
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div>
+    <div style={{ display: 'flex', gap: '10px' }}>
       {options.map((el, i) => (
-        <button type="button" onClick={onLeaveFeedback} name={el} key={i}>
+        <Button
+          variant="primary"
+          type="button"
+          onClick={onLeaveFeedback}
+          name={el}
+          key={i}
+        >
           {el}
-        </button>
+        </Button>
       ))}
     </div>
   );

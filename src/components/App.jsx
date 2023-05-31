@@ -1,4 +1,5 @@
 import { Feedback } from './Feedback';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const App = () => {
   return (
@@ -7,7 +8,7 @@ export const App = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 20,
         color: '#010101',
       }}
     >
