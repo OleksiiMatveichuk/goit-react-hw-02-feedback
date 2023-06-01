@@ -11,29 +11,10 @@ export class Feedback extends Component {
     bad: 0,
   };
 
-  clickAtButtom = e => {
-    switch (e.target.name) {
-      case 'good':
-        this.setState(stat => ({
-          good: stat.good + 1,
-        }));
-        break;
-
-      case 'neutral':
-        this.setState(stat => ({
-          neutral: stat.neutral + 1,
-        }));
-        break;
-
-      case 'bad':
-        this.setState(stat => ({
-          bad: stat.bad + 1,
-        }));
-        break;
-
-      default:
-        break;
-    }
+  clickAtButtom = options => {
+    this.setState(prev => ({
+      [options]: prev[options] + 1,
+    }));
   };
 
   countTotalFeedback = () => {
