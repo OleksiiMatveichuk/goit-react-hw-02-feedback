@@ -28,7 +28,7 @@ export const Statistics = ({
       </ListGroup.Item>
       <ListGroup.Item>
         <p>Positive feedback:</p>
-        <span>{positivePercentage() || 0} %</span>
+        <span>{positivePercentage || 0} %</span>
       </ListGroup.Item>
     </ListGroup>
   );
